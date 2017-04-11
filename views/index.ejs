@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Free Web tutorials">
+        <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+        <meta name="author" content="John Doe">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> <%= title %> </title>
+        <link rel="stylesheet" href="/assets/css/main.css">
+    </head>
+    <body>
+        <!--navigation-->
+        <header class="SiteHeader">
+            <nav class="SiteNav">
+                <ul class="nav-list">
+                    <li class="list-item"> <a href="/" class="list-item_anchor"> home </a> </li>
+                    <li class="list-item"> <a href="#page-2" class="list-item_anchor" onclick="showPage(this)"> about</a> </li>
+                    <li class="list-item"> <a href="#page-3" class="list-item_anchor"  onclick="showPage(this)"> work </a> </li>
+                    <li class="list-item"> <a href="#page-4" class="list-item_anchor"  onclick="showPage(this)"> contact </a> </li>
+                </ul>
+            </nav>
+        </header>
+
+
+        <!--pages -->
+        <section class="pages-container">
+            <div id="page-1" class="page page-1"><h1>home</h1></div> 
+            <div id="page-2" class="page page-2"><h1>about</h1></div> 
+            <div id="page-3" class="page page-3"><h1>work</h1></div> 
+            <div id="page-4" class="page page-4"><h1>contact</h1></div> 
+        </section>
+    
+       <script
+           src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous">
+        </script>
+        <script src="/assets/js/main.js" type="text/javascript"></script>
+    </body>
+</html>
