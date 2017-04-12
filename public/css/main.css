@@ -6,28 +6,135 @@ html, body{
 
 }
 
-body{
 
+.nav-hamburger{
+    width: 35px;
+    height: 35px;
+    padding: 18px;
+    background-color: transparent;
+    display: inline-block;
+    z-index: 1001;
+    position: fixed;
+    top: 45px;
+    left: 45px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    border-radius: 100%;
+}
 
+.hamburger-slider{
+    left: 85px;
+}
+
+.nav-hamburger:hover{
+    background-color: #fff;
+    box-shadow: 4px 1px rgba(0,0,0,0.6); 
+    -moz-box-shadow: 4px 1px rgba(0,0,0,0.6); 
+    -webkit-box-shadow: 4px 1px rgba(0,0,0,0.6); 
+    -o-box-shadow: 4px 1px rgba(0,0,0,0.6);
+}
+
+.nav-bar{
+    height: 5px;
+    width: 35px;
+    margin: 5px 0;
+    background: #fff;
+    display: block;
+    border-radius: 5px;
+    position: relative;
+   -moz-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+}
+
+.nav-hamburger:hover .nav-bar{
+    background-color: #000;   
+}
+
+.navbar-left{
+    transform: rotate(45deg);
+    top: 10px;
+}
+
+.navbar-right{
+    transform: rotate(-45deg);
+    top: -10px;
 }
 
 .SiteHeader{
     position: fixed;
     z-index: 1000;
     height: 100%;
-    width: 200px;
+    width: 250px;
+    left: -250px;
     background-color: #000;
     float: left;
+    transition: all 0.3s linear;
 
+}
+
+.SiteNav{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.nav-list{
+    padding: 0;
+    margin: 0;
+}
+
+.list-item{
+    list-style-type: none;
+    margin: 30px 0;
+    text-align: center;
+    transition: all 0.3s linear;
+}
+
+.list-item:hover{
+    transform: scale(1.3);
+}
+
+.list-item_anchor{
+    text-decoration: none;
+    color: #fff;
+    font-size: 30px;
+    transition: all 0.3s linear;
+}
+
+.nav-social{
+    position: absolute;
+    bottom: 50px;
+}
+
+.nav-social_anchor{
+    text-decoration: none;
+}
+
+.social-icon{
+    color: #fff;
+    font-size: 22px;
+    margin: 0 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.social-icon:hover{
+    transform: scale(1.2)
 }
 
 .pages-container{
     float: right;
-    width: calc(100% - 200px);
+    width: 100%;
     height: 100%;
     position: fixed;
     top: 0;
     right: 0;
+    transition: all 0.3s linear;
 }
 
 
@@ -47,11 +154,6 @@ body{
 .page-1{
     background-color: red;
     transform: translateX(0%);
-    -webkit-filter: blur(5px);
-  -moz-filter: blur(5px);
-  -o-filter: blur(5px);
-  -ms-filter: blur(5px);
-  filter: blur(5px);
 }
 
 .page-2{
@@ -73,6 +175,16 @@ background-color: green;
 }
 
 .hide{
+    visibility: hidden;
+    opacity: 0;
+    background: transparent;
+}
 
+.nav-visible{
+    left: 0;
+}
+
+.nav-width{
+    width: calc(100% - 250px); 
 }
 

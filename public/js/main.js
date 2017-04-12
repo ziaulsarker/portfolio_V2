@@ -2,6 +2,20 @@
 
 let pages = document.getElementsByClassName("page");
 
+let navIcon = document.querySelector(".nav-hamburger");
+
+navIcon.addEventListener("click", () => {
+    navIcon.classList.toggle("hamburger-slider");
+    document.querySelector(".bar-1").classList.toggle("navbar-left");
+    document.querySelector(".bar-2").classList.toggle("hide");
+    document.querySelector(".bar-3").classList.toggle("navbar-right");
+    document.querySelector(".SiteHeader").classList.toggle("nav-visible");
+    document.querySelector(".pages-container").classList.toggle("nav-width");
+});
+
+
+
+
 function showPage(element){
     // get id for all pages and convert to only show the string with out the hash
     let pageHash = element.hash.split("#").splice(-1, 1).join(); 
