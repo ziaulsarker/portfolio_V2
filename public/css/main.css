@@ -15,6 +15,10 @@ html, body{
     padding: 0;
 }
 
+body{
+    background-color: #000;
+}
+
 
 .nav-hamburger{
     width: 35px;
@@ -146,7 +150,7 @@ html, body{
 }
 
 .social-icon:hover{
-    transform: scale(1.5);
+    transform: scale(1.8);
 }
 
 .pages-container{
@@ -207,7 +211,7 @@ background-color: green;
 }
 
 .nav-width{
-    width: calc(100% - 250px); 
+    transform: translateX(250px);
 }
 
 
@@ -235,3 +239,19 @@ background-color: green;
 .home-canvas{
     
 }
+
+canvas {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #25003a;
+  background-image: linear-gradient(rgba(37, 0, 58, .888) 100%, transparent),
+                    url("/assets/img/home.png");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+
