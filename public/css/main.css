@@ -180,6 +180,9 @@ body{
 .page-1{
     background-color: red;
     transform: translateX(0%);
+    width: calc( 100% - 40px );
+    height: calc( 100% - 40px );
+    border: solid 20px #fff;
 }
 
 .page-2{
