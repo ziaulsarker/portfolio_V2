@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "ejs": "^2.5.6",
-    "express": "^4.15.2"
+    "express": "^4.15.2",
+    "wowjs": "^1.1.3"
   }
 }

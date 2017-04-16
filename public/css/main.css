@@ -35,10 +35,28 @@ body{
     -moz-transition: all 0.3s linear;
     transition: all 0.3s linear;
     border-radius: 100%;
+        animation: beat  1.5s ease-out 0s alternate infinite none running;
 }
+
+.beat-nav{
+    animation: beat 1.5s ease-out 0s alternate infinite none running;
+}
+
+@keyframes beat {
+    0%{
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+
 
 .hamburger-slider{
     left: 85px;
+    animation: none;
 }
 
 .nav-hamburger:hover{
@@ -47,6 +65,7 @@ body{
     -moz-box-shadow: 4px 1px rgba(0,0,0,0.6); 
     -webkit-box-shadow: 4px 1px rgba(0,0,0,0.6); 
     -o-box-shadow: 4px 1px rgba(0,0,0,0.6);
+    animation: none;
 }
 
 .nav-bar{
@@ -168,12 +187,13 @@ body{
 
 .page{
     position: absolute;
-    height: 100%;
-    width: 100%;
+    width: calc( 100% - 40px );
+    height: calc( 100% - 40px );
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
+    border: solid 20px #fff;
     transform: translateX(100%);
     transition: all 0.3s linear;
 }
@@ -220,29 +240,6 @@ background-color: green;
 
 
 /* home page */
-.home{
-
-}
-
-.home-container{
-
-}
-
-.home-wrapper{
-
-}
-
-.home-title{
-
-}
-
-.home-text{
-
-}
-
-.home-canvas{
-    
-}
 
 canvas {
   position: relative;
@@ -251,7 +248,7 @@ canvas {
   width: 100%;
   height: 100%;
   background-color: #25003a;
-  background-image: linear-gradient(rgba(37, 0, 58, .888) 100%, transparent),
+  background-image: linear-gradient(rgba(37, 0, 58, 0.8) 100%, transparent),
                     url("/assets/img/home.png");
   background-size: cover;
   background-position: center;
@@ -259,3 +256,91 @@ canvas {
 }
 
 
+
+/*about page*/
+
+.about{
+    background-color: #faf9f8;
+    border: 20px solid #fff; 
+}
+
+.about-wrapper{
+    height: 100%;
+}
+
+.img-section{
+    height: 400px;
+    padding: 100px 0;
+    background-color: #353f55;
+}
+
+.img-container{
+    height: 250px;
+    width: 250px;
+    background-color: #fff;
+    border-radius: 100%;
+    margin: 0 auto;
+    background-image: url("/assets/img/me.jpg");
+    background-size: cover;
+    background-position: center;
+    border: 2px solid #fff;
+    transition: all 0.3s linear;
+}
+
+.img-container:hover{
+    transform: scale(1.05);
+}
+
+.about-text_container{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.my-des_title{
+    color: #fff;
+    font-family: roboto;
+}
+
+.my-des_text{
+    color: #fff;
+    font-family: roboto;   
+}
+
+.about-what{
+    height: 100%;
+    margin-top: 30px;
+}
+
+.about-what_wrapper{
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.what{
+    float: left;
+    width: 33%;
+
+}
+
+.what-wrapper{
+    padding: 20px;
+}
+
+.what-icon{
+    font-size: 20px;
+}
+
+.what-title{
+    font-family: roboto; 
+}
+
+.what-text{
+    font-family: roboto; 
+    color: rgba(51,51,51,0.4);
+    line-height: 1.8em;
+}
+
+.learning{
+    font-size: 16px;
+    font-family: roboto; 
+}
