@@ -8,6 +8,11 @@
     src: url("../fonts/RobotoMono-Regular.ttf");
 }
 
+@font-face {
+    font-family: logo-text;
+    src: url("../fonts/PollerOne.ttf");
+}
+
 html, body{
     height: 100%;
     width: 100%;
@@ -17,6 +22,44 @@ html, body{
 
 body{
     background-color: #000;
+}
+
+.my-logo{
+    height: 100px;
+    width: 100px;
+    position: fixed;
+    z-index: 1001;
+    right: 58px;
+    top: 58px;
+    background: #fff;
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    transition: all 0.3s linear; 
+}
+
+.hide-logo{
+    transform: translateX(250px);
+}
+
+.my-logo_wrapper{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo{
+    font-family: logo-text;
+    color: #000;
+ 
+}   
+
+.main-logo_text{
+  font-size: 2em;
+  vertical-align: middle;  
 }
 
 
@@ -35,7 +78,7 @@ body{
     -moz-transition: all 0.3s linear;
     transition: all 0.3s linear;
     border-radius: 100%;
-        animation: beat  1.5s ease-out 0s alternate infinite none running;
+
 }
 
 .beat-nav{
@@ -56,7 +99,6 @@ body{
 
 .hamburger-slider{
     left: 85px;
-    animation: none;
 }
 
 .nav-hamburger:hover{
@@ -99,7 +141,7 @@ body{
     z-index: 1000;
     height: 100%;
     width: 250px;
-    left: -250px;
+    transform: translateX(-250px);
     background-color: #000;
     float: left;
     transition: all 0.3s linear;
@@ -196,6 +238,7 @@ body{
     border: solid 20px #fff;
     transform: translateX(100%);
     transition: all 0.3s linear;
+    overflow: scroll;
 }
 
 .page-1{
@@ -203,7 +246,7 @@ body{
     transform: translateX(0%);
     width: calc( 100% - 40px );
     height: calc( 100% - 40px );
-    border: solid 20px #fff;
+    overflow: hidden
 }
 
 .page-2{
@@ -231,7 +274,7 @@ background-color: green;
 }
 
 .nav-visible{
-    left: 0;
+    transform: translateX(0);
 }
 
 .nav-width{
@@ -240,6 +283,96 @@ background-color: green;
 
 
 /* home page */
+
+.home-wrapper{
+    position: relative;
+}
+
+.home-content{
+    position: absolute;
+    font-family: roboto;
+    z-index: 1000;
+    color: #fff;
+    font-size: 50px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+}
+
+.home-content_wrapper{
+
+}
+
+.home-text{
+    margin: 0;
+}
+
+.fly-in_text{
+    padding: 0;
+    margin: 0;
+}
+
+.fly-in_text li {
+    list-style-type: none;
+    display: inline-block;
+    margin: 0 -10px;
+    opacity: 1;
+    transition: all .7s linear; 
+}
+
+.text-hidden{
+    opacity: 0;
+}
+
+.text-visible{
+    opacity: 1;
+}
+
+.text-top li:nth-child(5){
+    margin-right: 30px;
+}
+
+
+.home-footer{
+    position: absolute;
+    z-index: 1000;
+    color: #fff;
+    bottom: 30;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.home-footer_wrapper{
+    animation-delay: 0.8s;
+}
+
+.home-icon{
+    margin: 0 15px;
+}
+
+.home-icon:hover{
+    color: #fff;
+    transform: scale(2);
+}
+
+.home-work_button{
+    font-size: 20px;
+    margin-top: 30px;
+    display: inline-block;
+    text-decoration: none;
+    padding: 15px 30px;
+    background: #fff;
+    animation-delay: 1s;
+    box-shadow: inset 0 0 0 0 red;
+    transition: all 0.3s linear;
+}
+
+.home-work_button:hover{
+  box-shadow: inset 220px 0 0 0 red;
+  color: #fff;  
+}
 
 canvas {
   position: relative;
@@ -257,10 +390,11 @@ canvas {
 
 
 
+
 /*about page*/
 
 .about{
-    background-color: #faf9f8;
+    background-color: #fff;
     border: 20px solid #fff; 
 }
 
@@ -269,9 +403,10 @@ canvas {
 }
 
 .img-section{
-    height: 400px;
-    padding: 100px 0;
+    height: 450px;
+    padding: 100px 0; 
     background-color: #353f55;
+    position: relative;
 }
 
 .img-container{
@@ -306,12 +441,34 @@ canvas {
     font-family: roboto;   
 }
 
+.scroll-down{
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    height: 50px;
+    width: 30px;
+    border-radius: 15px;
+}
+
+.scroll-down_icon{
+    height: 5px;
+    width: 5px;
+    display: block;
+    background: #000;
+    margin: 0 auto;
+}
+
+
 .about-what{
-    height: 100%;
-    margin-top: 30px;
+    height: 250px;
+    padding: 60px 0;
+    background-color: #faf9f8;
 }
 
 .about-what_wrapper{
+    height: 100%;
     max-width: 80%;
     margin: 0 auto;
 }
@@ -327,7 +484,8 @@ canvas {
 }
 
 .what-icon{
-    font-size: 20px;
+    font-size: 30px;
+
 }
 
 .what-title{

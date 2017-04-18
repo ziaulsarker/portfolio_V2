@@ -4,8 +4,11 @@ let pages = document.getElementsByClassName("page");
 
 let navIcon = document.querySelector(".nav-hamburger");
 
+let logo = document.querySelector(".my-logo");
+
 navIcon.addEventListener("click", () => {
     navIcon.classList.toggle("hamburger-slider");
+    logo.classList.toggle("hide-logo");
     document.querySelector(".bar-1").classList.toggle("navbar-left");
     document.querySelector(".bar-2").classList.toggle("hide");
     document.querySelector(".bar-3").classList.toggle("navbar-right");
@@ -197,11 +200,6 @@ function showPage(element){
       }
       node.moveNode();
     }
-    ctx.fillStyle = "#fff";
-    ctx.font = "50px roboto";
-    ctx.textAlign = "center";
-    ctx.fillText("Ziaul Sarker", window.innerWidth / 2, (window.innerHeight / 2) - 50 );
-    ctx.fillText("Developer", window.innerWidth / 2, (window.innerHeight / 2) + 30);
 
     requestAnimationFrame(redrawScene);
   }
@@ -227,6 +225,77 @@ function showPage(element){
 
 
 })();
+
+
+
+
+
+(function(){
+
+  setTimeout(() => {
+    navIcon.classList.add("beat-nav");
+  }, 1000);
+
+  let homeTextTop = document.querySelectorAll(".text-top li");
+  let homeTextBottom = document.querySelectorAll(".text-bottom li");
+
+  function animateText(){
+    homeTextTop.forEach( (letter) => {
+      letter.style.transform = "translate(" + randomNumberByWidth() + "px" + "," + randomNumberByHeight() + "px )";
+    } );
+
+    homeTextBottom.forEach( (letter) => {
+      letter.style.transform = "translate(" + randomNumberByWidth() + "px" + "," + randomNumberByHeight() + "px )";
+    } );
+
+    setTimeout(() => {
+
+      document.querySelectorAll(".fly-in_text").forEach((list) => { 
+        list.classList.remove("text-hidden");
+        
+      });
+
+      homeTextTop.forEach( (letter) => {
+        letter.style.transform = "translate(0px)"
+      });
+
+      homeTextBottom.forEach( (letter) => {
+        letter.style.transform = "translate(0px)"
+      });
+
+    }, 100 );
+  }
+
+   let counter = 2;
+
+  function animateIcon(){
+    let icon = document.querySelector(".scroll-down_icon");
+    icon.style.transform = "translateY(" + counter + "px)";
+    
+    counter ++;
+    if(counter >= 45) counter = 2;
+    requestAnimationFrame(animateIcon);
+  }
+
+  animateIcon();
+  animateText();
+
+  
+
+})()
+
+
+
+function randomNumberByWidth(){
+    let random = Math.floor(Math.random() * window.innerWidth ) - (window.innerWidth / 2);
+    return random;
+}
+
+function randomNumberByHeight(){
+    let random = Math.floor(Math.random() * window.innerHeight ) - (window.innerHeight / 2);
+    return random;
+}
+
 
 
 

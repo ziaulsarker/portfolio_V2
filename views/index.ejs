@@ -15,10 +15,10 @@
         <header class="SiteHeader">
             <nav class="SiteNav">
                 <ul class="nav-list">
-                    <li class="list-item"> <a href="/" class="list-item_anchor"> home </a> </li>
+                    <!--<li class="list-item"> <a href="/" class="list-item_anchor"> home </a> </li>-->
                     <li class="list-item"> <a href="#page-2" class="list-item_anchor" onclick="showPage(this)"> about</a> </li>
-                    <li class="list-item"> <a href="#page-3" class="list-item_anchor"  onclick="showPage(this)"> work </a> </li>
-                    <li class="list-item"> <a href="#page-4" class="list-item_anchor"  onclick="showPage(this)"> contact </a> </li>
+                    <li class="list-item"> <a href="#page-3" class="list-item_anchor" onclick="showPage(this)"> work </a> </li>
+                    <li class="list-item"> <a href="#page-4" class="list-item_anchor" onclick="showPage(this)"> contact </a> </li>
                 </ul>
                 <div class="nav-social">
                     <div class="nav-social_wrapper">
@@ -31,11 +31,22 @@
         </header>
 
         <!--navigation hamburger icon-->
-        <div class="nav-hamburger">
+        <div class="nav-hamburger animated fadeInDown">
             <span class="nav-bar bar-1"></span>
             <span class="nav-bar bar-2"></span>
             <span class="nav-bar bar-3"></span>
         </div>
+
+
+        <!--logo-->
+
+        <a class="my-logo animated fadeInDown" href="/">
+            <div class="my-logo_wrapper">
+                <span class="logo"> 
+                    <span class="logo-angle"> < </span>  <span class="main-logo_text"> ZS </span>  <span class="logo-angle"> > </span>  
+                </span>
+            </div>
+        </a>
 
 
         <!--pages -->
@@ -46,7 +57,46 @@
             <div id="page-1" class="page page-1 home">
                 <div class="home-container">
                     <div class="home-wrapper">
-                        <canvas id="canvas" class="canvas"></canvas>                
+                        <div class="home-content">
+                            <div class="home-contnet_wrapper">
+
+                                <ul class="fly-in_text text-top text-hidden">
+                                    <li> Z </li>
+                                    <li> i </li>
+                                    <li> a </li>
+                                    <li> u </li>
+                                    <li> l </li>
+
+                                    <li> S </li>
+                                    <li> a </li>
+                                    <li> r </li>
+                                    <li> k </li>
+                                    <li> e </li>
+                                    <li> r </li>
+                                </ul>
+                                
+                                <ul class="fly-in_text text-bottom text-hidden">
+                                    <li> D </li>
+                                    <li> e </li>
+                                    <li> v </li>
+                                    <li> l </li>
+                                    <li> o </li>
+                                    <li> p </li>
+                                    <li> e </li>
+                                    <li> r </li>
+                                </ul>
+
+                                <a href="#page-3" onclick="showPage(this)" class="home-work_button animated fadeIn">View My Work </a>
+                            </div>
+                        </div>
+                        <canvas id="canvas" class="canvas"></canvas>
+                        <div class="home-footer ">
+                            <div class="home-footer_wrapper animated fadeInUP">
+                                <a href="mailto:ziaulsarker@gmail.com" class="nav-social_anchor"> <span class="social-icon home-icon fa fa-envelope"> </span> </a>
+                                <a href="tel:6462837989" class="nav-social_anchor"> <span class="social-icon home-icon fa fa-phone"> </span> </a>
+                                <a href="https://www.linkedin.com/in/ziaul-sarker-58b11374/" target="_blank" class="nav-social_anchor"> <span class="social-icon home-icon fa fa-linkedin"> </span> </a>
+                            </div>    
+                        </div>          
                     </div>
                 </div>    
             </div> 
@@ -78,18 +128,20 @@
                         <div class="img-container"></div>
                         <div class="about-text_container">
                             <h1 class="my-des_title">
-                               I am a Front-End Web Developer with a passion for javascript.
+                               Front-End Web Developer with a passion for javascript.
                             </h1>
                             <p class="my-des_text">I enjoy creating software that leave a positive impact not only on the user but the world!</p>
                             <p class="my-des_text">I genuinely enjoy programing and looking to surround my self with like-minded people.</p>
                         </div>
-
+                        <div class="scroll-down">
+                            <span class="scroll-down_icon"></span>
+                        </div>
                     </section>
 
                     <section class="about-what">
                         <div class="about-what_wrapper">  
                             
-                            <div class="what fadeInUP">
+                            <div class="what wow fadeInUp">
                                 <div class="what-wrapper">
                                     <span class="what-icon fa fa-mobile"></span>
                                     <h3 class="what-title">Responsive Design</h3>
@@ -116,6 +168,14 @@
 
                         </div>
                     </section>
+
+                    <section class="skills">
+                        <div class="skills-wrapper">
+                            <h2>Skills</h2>
+                        </div>
+                    </section>
+
+
                 </div>
             </div> 
 
