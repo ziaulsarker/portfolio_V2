@@ -18,6 +18,10 @@ app.set("view engine", "ejs");
 
 app.use("/", router);
 
+app.get("/resume", (req, res) => {
+    fs.createReadStream(__dirname + "/public/resume/ZiaulSarker-Resume.pdf").pipe(res);
+})
+
 
 app.listen(port, host, ()=>{
     console.log(`server is running on ${host}:${port}`);
