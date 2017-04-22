@@ -78,7 +78,12 @@ body{
     -moz-transition: all 0.3s linear;
     transition: all 0.3s linear;
     border-radius: 100%;
+    transform: translateX(0%);
 
+}
+
+.slide-navigation{
+    transform: translateX(45px)
 }
 
 .beat-nav{
@@ -86,6 +91,16 @@ body{
 }
 
 @keyframes beat {
+    0%{
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes beat-slide {
     0%{
         transform: scale(1);
     }
@@ -404,7 +419,12 @@ canvas {
 .img-section{
     height: 450px;
     padding: 100px 0; 
+    /*background: rgba(53, 63, 85, 0.7);*/
+
+    background: #4C3EAB ;
+
     background-image: linear-gradient(-45deg, #4C2379 0%, #4C3EAB 100%);
+    
     position: relative;
 }
 
@@ -449,6 +469,7 @@ canvas {
     height: 50px;
     width: 30px;
     border-radius: 15px;
+    z-index: 3;
 }
 
 .scroll-down_icon{
@@ -685,8 +706,7 @@ canvas {
 }
 
 .work-header{
-    height: 450px;
-    background: rgba(0, 0, 0, 0.9);
+    height: 650px;
 }
 
 .work-header_wrapper{
@@ -695,6 +715,27 @@ canvas {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
+}
+
+
+
+.portfolio-video{
+    position: absolute;
+    z-index: 1;
+    min-width: 100%;
+    min-height: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: initial;
+}
+
+.work-header_gradiant{
+    background: linear-gradient(135deg, rgba(28, 183, 141, 0.6) 0%, rgba(28,113,184, 0.6) 50%, rgba(14, 57, 92, 0.6) 90%, rgba(9, 24, 63, 0.6) 100%);
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
 }
 
 .work-header_title{
@@ -704,9 +745,153 @@ canvas {
     font-family: roboto;
     text-transform: uppercase;
     letter-spacing: 0.5em;
-    background-image: url("/assets/img/home.png");
+    z-index: 3;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+}
+
+
+.portfolio-section{
+    height: auto;
+    background: rgba(212, 219, 220, 0.85)
+}
+
+.portfolio-section_wrapper{
+    padding: 100px 30px;
+}
+
+.recent-projects::after{
+    content: "";
+    display: block;
+    width: 100px;
+    height: 2px;
+    background: #fff;
+    margin: 30px auto 0;
+    box-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+}
+
+
+.projects-worked{
+    margin: 60px 0 100px;
+}
+
+.portfolio-section_wrapper .projects-worked:last-child{
+     margin: 60px 0 0;   
+}
+
+.projects-worked_wrapper{
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+
+
+.projects-des{
+    font-family: roboto;
+    font-size: 2em;
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+}
+
+.projects-des_work::after{
+    content: "";
+    display: block;
+    width: 60px;
+    height: 2px;
+    margin: 30px auto;
+    background-color: #fff;
+    box-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+
+}
+
+.projects-des_personal::after{
+    content: "";
+    display: block;
+    width: 60px;
+    height: 2px;
+    margin: 30px auto;
+    background-color: #fff;
+    box-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+}
+
+.portfolio-anchor{
+    display: inline-block;
+    height: auto;
+    width: auto;
+    text-decoration: none;
+}
+
+
+.portfolio-block{
+    width: 350px;
+    height: 400px;
+    position: relative;
+    perspective: 800px;
+    display: inline-block;
+    margin: 30px 30px;
+    
+}
+
+.portfolio-block_wrapper{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+.portfolio-block_face{
+    margin: 0;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    box-shadow: 2px 4px 3px 2px rgba(0,0,0,0.3);
+}
+
+
+.portfolio-block_front{
+  background: red;
+}
+
+.portfolio-block_back{
+  background: blue;
+  transform: rotateX( 180deg );
+}
+
+.portfolio-block_wrapper:hover{
+      transform: rotateX( 180deg ) scale(1.2);
+}
+
+.portfolio-section_wrapper .projects-worked:nth-child(2) .portfolio-block_wrapper:hover{
+      transform: rotateY( 180deg ) scale(1.2);
+}
+
+
+.beready-front{
+    background-image: url("/assets/img/be-ready.png");
     background-size: cover;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    background-repeat: no-repeat;
+    /*background-position: center;*/
+}
+
+.beready-back{
+
+}
+
+.sentinel-front{
+    background-image: url("/assets/img/sentinel.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.sentinel-back{
+
 }

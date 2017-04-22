@@ -226,6 +226,17 @@ function showPage(element){
 
 })();
 
+  function beatChecker(element){
+
+    console.log(element);
+    element.classList.toggle("slide-navigation");
+    element.classList.toggle("animated");
+    element.classList.toggle("fadeInDown");
+    element.classList.toggle("beat-nav");
+    element.classList.toggle("hamburger-slider");
+
+  };
+
 
 
 
@@ -269,8 +280,11 @@ function showPage(element){
    let counter = 2;
 
   function animateIcon(){
-    let icon = document.querySelector(".scroll-down_icon");
-    icon.style.transform = "translateY(" + counter + "px)";
+    let icons = document.querySelectorAll(".scroll-down_icon");
+
+    icons.forEach( (icon) => {
+        icon.style.transform = "translateY(" + counter + "px)";
+    });
     
     counter ++;
     if(counter >= 45) counter = 2;
