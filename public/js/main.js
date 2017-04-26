@@ -4,11 +4,12 @@ let pages = document.getElementsByClassName("page");
 
 let navIcon = document.querySelector(".nav-hamburger");
 
-let logo = document.querySelector(".my-logo");
+let siteHeader = document.querySelector(".SiteHeader");
+
+
 
 navIcon.addEventListener("click", () => {
     navIcon.classList.toggle("hamburger-slider");
-    logo.classList.toggle("hide-logo");
     document.querySelector(".bar-1").classList.toggle("navbar-left");
     document.querySelector(".bar-2").classList.toggle("hide");
     document.querySelector(".bar-3").classList.toggle("navbar-right");
@@ -16,10 +17,32 @@ navIcon.addEventListener("click", () => {
     document.querySelector(".pages-container").classList.toggle("nav-width");
 });
 
+  function beatChecker(element){
+
+    element.classList.toggle("slide-navigation");
+    element.classList.toggle("animated");
+    element.classList.toggle("fadeInDown");
+    element.classList.toggle("beat-nav");
+    element.classList.toggle("hamburger-slider");
+
+    // if(siteHeader.className){
+    //   console.log(siteHeader.classList);
+    // }
+
+  };
+
 
 
 
 function showPage(element){
+    document.querySelector(".SiteHeader").classList.toggle("nav-visible");
+    document.querySelector(".pages-container").classList.toggle("nav-width");
+    document.querySelector(".nav-hamburger").classList.toggle("slide-navigation");
+    document.querySelector(".bar-1").classList.toggle("navbar-left");
+    document.querySelector(".bar-2").classList.toggle("hide");
+    document.querySelector(".bar-3").classList.toggle("navbar-right");
+
+  
     // get id for all pages and convert to only show the string with out the hash
     let pageHash = element.hash.split("#").splice(-1, 1).join(); 
 
@@ -33,6 +56,22 @@ function showPage(element){
         }
     }
 } //end function
+
+
+function showPort(element){
+      // get id for all pages and convert to only show the string with out the hash
+    let pageHash = element.hash.split("#").splice(-1, 1).join(); 
+
+    // loop through all pages and if the hash for the anchor matches translate the page from left to right with css class
+    for(let i = 0; i < pages.length; i++){ 
+        if(pageHash === pages[i].id ){
+
+            pages[i].classList.add("show");
+        } else{
+            pages[i].classList.remove("show") ;
+        }
+    }
+}
 
 
 (function() {
@@ -226,19 +265,6 @@ function showPage(element){
 
 })();
 
-  function beatChecker(element){
-
-    console.log(element);
-    element.classList.toggle("slide-navigation");
-    element.classList.toggle("animated");
-    element.classList.toggle("fadeInDown");
-    element.classList.toggle("beat-nav");
-    element.classList.toggle("hamburger-slider");
-
-  };
-
-
-
 
 
 (function(){
@@ -309,6 +335,80 @@ function randomNumberByHeight(){
     let random = Math.floor(Math.random() * window.innerHeight ) - (window.innerHeight / 2);
     return random;
 }
+
+
+// function needAnimation(){
+//     let parent = document.querySelector(".pages-container").children;
+//     for(let i = 1; i < parent.length; i++){
+//         if(parent[i].classList.contains("show")){
+
+//             let children = parent[i].getElementsByTagName("*");
+//             for(let i = 0; i < children.length; i++){
+//                 if(children[i].classList){
+//                     let childClasses = children[i].classList;
+                    
+//                     for(let i = 0; i < childClasses.length; i++){
+//                         if(childClasses[i] === "add-animation"){
+//                             let element = document.getElementsByClassName(childClasses[i]);
+//                             if(element.length > 1){
+//                               for(let i = 0; i < element.length; i++){
+//                             console.log(element[i].classList);
+//                                 element[i].classList.add("animated", "fadeInUp");
+//                               }
+//                             } 
+//                             else{
+//                                 element[0].classList.add("animated", "fadeInUp");
+//                             }
+//                         }
+//                     }
+//                 }    
+//             }  
+//         }
+//     }
+// }
+// needAnimation();
+
+// function addWow(element){
+//     let fromTop = document.querySelector(".show").scrollTop;
+//     console.log(element);
+//     console.log(element.offsetTop);
+//     // if(fromTop > element.offsetTop - 100){
+//     //   // console.log(fromTop);
+//     // }
+// }
+
+
+
+
+
+// let scrollablePages = document.querySelectorAll(".page");
+
+// scrollablePages.forEach((page) => {
+//   page.onscroll = () => {
+//     needAnimation();
+//   }
+// })
+
+
+
+
+function getPage(){
+  let pages = document.querySelector(".pages-container").children;
+  for(let i = 0; i < pages.length; i++){
+  
+
+    if(pages[i].classList.contains("show")){
+      console.log(pages[i]);
+    }
+  }
+}
+
+getPage();
+  
+
+
+
+
 
 
 
