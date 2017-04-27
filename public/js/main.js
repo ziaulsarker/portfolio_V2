@@ -399,6 +399,11 @@ function getPage(){
 
     if(pages[i].classList.contains("show")){
       console.log(pages[i]);
+        let childClasses = pages[i].querySelectorAll(".show .animation-needed");
+        childClasses.forEach((element) => {
+          element.classList.add("testing_animations", "animated", "fadeInUp");
+          console.log(element);
+        })
     }
   }
 }
@@ -410,7 +415,9 @@ getPage();
 
 
 
+function addAnimation(page, pageAnimations){
 
+}
 
 
 
