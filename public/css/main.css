@@ -181,6 +181,8 @@ body{
 .nav-social{
     position: absolute;
     bottom: 50px;
+    width: 100%;
+    text-align: center;
 }
 
 .nav-social_anchor{
@@ -685,7 +687,7 @@ canvas {
 }
 
 .work-header{
-    height: 650px;
+    height: 400px;
 }
 
 .work-header_wrapper{
@@ -721,7 +723,7 @@ canvas {
 .work-header_title{
     margin: 0;
     color: #fff;
-    font-size: 72px;
+    font-size: 25px;
     font-family: roboto;
     text-transform: uppercase;
     letter-spacing: 0.5em;
@@ -735,7 +737,7 @@ canvas {
 }
 
 .portfolio-section_wrapper{
-     padding: 100px 30px 60px;
+    padding: 60px 0 60px;
 }
 
 .recent-projects::after{
@@ -771,7 +773,7 @@ canvas {
 
 .projects-des{
     font-family: roboto;
-    font-size: 2em;
+    font-size: 20px;
     text-align: center;
     margin-top: 0;
 }
@@ -781,9 +783,8 @@ canvas {
     display: block;
     width: 60px;
     height: 2px;
-    margin: 30px auto;
+    margin: 30px auto 30px;
     box-shadow: 2px 4px 3px rgba(0,0,0,0.3);
-    margin-bottom: 60px;
 
 }
 
@@ -814,7 +815,7 @@ canvas {
 
 .portfolio-block{
     width: 400px;
-    height: 450px;
+    height: 370px;
     position: relative;
     perspective: 800px;
     display: inline-block;
@@ -891,20 +892,25 @@ canvas {
     color: #fff;
 }
 
+.project-name{
+    text-align: center;
+}
+
 .contact-cta{
     /*background: #f5f5f5; */
     background: #000;
 }
 
 .contact-cta_wrapper{
-    padding: 60px 0;
+    padding: 60px 10px;
     text-align: center;
 }
 
 .contact-cta_title{
     font-family: roboto;
     margin-bottom: 30px;
-    font-size: 20px;
+    font-size: 18px;
+    line-height: 1.9em;
     color: #fff;
 }
 
@@ -920,7 +926,7 @@ canvas {
     text-decoration: none;
     padding: 15px 30px;
     background: #fff;
-    font-size: 20px;
+    font-size: 18px;
     color: #000;
     display: inline-block;
     transition: all 0.3s linear; 
@@ -1128,6 +1134,18 @@ canvas {
 
     .resume-link{
         font-size: 18px;
+    }
+
+
+
+    /*portfolio page*/
+
+    .work-header{
+        height: 450px;
+    }
+
+    .work-header_title{
+        font-size: 36px;
     }
 }
 
@@ -1649,53 +1667,13 @@ canvas {
 
 
     /* work page portfolio */
-    .work{
-        background-color: #fff;
-    }
 
     .work-header{
         height: 650px;
     }
 
-    .work-header_wrapper{
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-    }
-
-
-
-    .portfolio-video{
-        position: absolute;
-        z-index: 1;
-        min-width: 100%;
-        min-height: 100%;
-        width: 100%;
-        height: 100%;
-        object-fit: initial;
-    }
-
-    .work-header_gradiant{
-
-        background: rgba(0,0,0, 0.3);
-        position: absolute;
-        z-index: 2;
-        width: 100%;
-        height: 100%;
-    }
-
     .work-header_title{
-        margin: 0;
-        color: #fff;
         font-size: 72px;
-        font-family: roboto;
-        text-transform: uppercase;
-        letter-spacing: 0.5em;
-        z-index: 3;
-        text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
     }
 
 
@@ -1739,19 +1717,10 @@ canvas {
 
 
     .projects-des{
-        font-family: roboto;
-        font-size: 2em;
-        text-align: center;
-        margin-top: 0;
+        font-size: 32px;
     }
 
     .projects-des_work::after{
-        content: "";
-        display: block;
-        width: 60px;
-        height: 2px;
-        margin: 30px auto;
-        box-shadow: 2px 4px 3px rgba(0,0,0,0.3);
         margin-bottom: 60px;
 
     }
@@ -1760,35 +1729,9 @@ canvas {
         margin-bottom: 60px;
     }
 
-    .projects-des_personal::after{
-        content: "";
-        display: block;
-        width: 60px;
-        height: 2px;
-        margin: 30px auto;
-        background-color: #fff;
-        box-shadow: 2px 4px 3px rgba(0,0,0,0.3);
-    }
-
-    .portfolio-anchor{
-        display: inline-block;
-        height: auto;
-        width: auto;
-        text-decoration: none;
-        color: #fff;
-        font-family: roboto;
-        cursor: default;
-    }
-
 
     .portfolio-block{
-        width: 400px;
         height: 450px;
-        position: relative;
-        perspective: 800px;
-        display: inline-block;
-        margin: 15px
-        
     }
 
     .portfolio-block_wrapper{
@@ -1856,25 +1799,14 @@ canvas {
         
     }
 
-    .project-coming_des{
-        color: #fff;
-    }
 
-    .contact-cta{
-        /*background: #f5f5f5; */
-        background: #000;
-    }
 
     .contact-cta_wrapper{
         padding: 60px 0;
-        text-align: center;
     }
 
     .contact-cta_title{
-        font-family: roboto;
-        margin-bottom: 30px;
         font-size: 20px;
-        color: #fff;
     }
 
     .contact-cta_text{
@@ -1885,21 +1817,7 @@ canvas {
     }
 
     .contact-cta_link{
-        font-family: roboto;
-        text-decoration: none;
-        padding: 15px 30px;
-        background: #fff;
         font-size: 20px;
-        color: #000;
-        display: inline-block;
-        transition: all 0.3s linear; 
-        border: 2px solid #000;
-    }
-
-    .contact-cta_link:hover{
-        background: #000;
-        color: #fff;
-        border: 2px solid #fff;
     }
 
 
