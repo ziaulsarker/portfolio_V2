@@ -2,20 +2,20 @@
     <head>
         <meta charset="UTF-8">
         <meta name="description" content="Free Web tutorials">
-        <meta name="keywords" content="HTML,CSS,XML,JavaScript">
-        <meta name="author" content="John Doe">
+        <meta name="keywords" content="Web Developer, Programmer, HTML, CSS, Javascript, Developer, Freelance">
+        <meta name="author" content="Ziaul Sarker">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title> <%= title %> </title>
         <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
         <link rel="stylesheet" href="/assets/css/animate.css">
-        <link rel="stylesheet" href="/assets/css/main.css">
+        <link rel="stylesheet" href="/assets/css/main.min.css">
     </head>
     <body>
         <!--navigation-->
         <header class="SiteHeader">
             <nav class="SiteNav">
                 <ul class="nav-list">
-                    <!--<li class="list-item"> <a href="/" class="list-item_anchor"> home </a> </li>-->
+                    <li class="list-item"> <a href="#page-1" class="list-item_anchor" onclick="showPage(this); getPage();"> home </a> </li>
                     <li class="list-item"> <a href="#page-2" class="list-item_anchor" onclick="showPage(this); getPage();"> about</a> </li>
                     <li class="list-item"> <a href="#page-3" class="list-item_anchor" onclick="showPage(this); getPage();"> work </a> </li>
                     <li class="list-item"> <a href="#page-4" class="list-item_anchor" onclick="showPage(this); getPage();"> contact </a> </li>
@@ -36,17 +36,6 @@
             <span class="nav-bar bar-2"></span>
             <span class="nav-bar bar-3"></span>
         </div>
-
-
-        <!--logo-->
-
-        <a class="my-logo animated fadeInDown" href="/">
-            <div class="my-logo_wrapper">
-                <span class="logo"> 
-                    <span class="logo-angle"> < </span>  <span class="main-logo_text"> ZS </span>  <span class="logo-angle"> > </span>  
-                </span>
-            </div>
-        </a>
 
 
         <!--pages -->
@@ -105,7 +94,7 @@
 
 
 <!-- I convert sugar and sodium into software.-->
-            <div id="page-2" class="page page-2 about animation-needed">
+            <div id="page-2" class="page page-2 about">
                 <div class="about-wrapper">
                     <section class="img-section">
                         <div class="img-container"></div>
@@ -268,11 +257,7 @@
 
 
 
-
-
-
-
-            <div id="page-3" class="page page-3 work animation-needed">
+            <div id="page-3" class="page page-3 work">
                 <div class="work-wrapper">
                     <div class="work-header">
                         <div class="work-header_wrapper">
@@ -299,6 +284,7 @@
                                             <div class="portfolio-block_wrapper">
                                                 <div class="portfolio-block_face portfolio-block_front beready-front">
                                                     <img src="/assets/img/ready.png" alt="" class="beready-img project-img">
+                                                    <p class="project-name_mobile">Be Ready LI</p>
                                                 </div>
                                                 <div class="portfolio-block_face  portfolio-block_back beready-back"><h3 class="project-name"> <span> Be Ready LI </span> </h3></div>
                                             </div>
@@ -312,6 +298,7 @@
                                             <div class="portfolio-block_wrapper">
                                                 <div class="portfolio-block_face portfolio-block_front sentinel-front">
                                                     <img src="/assets/img/sentinel.png" alt="" class="sentinel-img project-img">
+                                                    <p class="project-name_mobile"> Sentinel Data Centers</p>
                                                 </div>
                                                 <div class="portfolio-block_face  portfolio-block_back sentinel-back"><h3 class="project-name"> <span> Sentinel Data Centers</span> </div>
                                             </div>
@@ -325,6 +312,7 @@
                                             <div class="portfolio-block_wrapper">
                                                 <div class="portfolio-block_face portfolio-block_front buechel-front">
                                                     <img src="/assets/img/buechel.png" alt="" class="buechel-img project-img">
+                                                     <p class="project-name_mobile"> Buechel Stone </p>
                                                 </div>
                                                 <div class="portfolio-block_face  portfolio-block_back buechel-back"><h3 class="project-name"> <span> Buechel Stone </span> </div>
                                             </div>
@@ -339,6 +327,7 @@
                                             <div class="portfolio-block_wrapper">
                                                 <div class="portfolio-block_face portfolio-block_front fv-front">
                                                     <img src="/assets/img/fv.png" alt="" class="fv-img project-img">
+                                                     <p class="project-name_mobile"> FV-Magazine</p>
                                                 </div>
                                                 <div class="portfolio-block_face  portfolio-block_back fv-back"><h3 class="project-name"> <span> FV-Magazine </span> </div>
                                             </div>
@@ -351,6 +340,8 @@
                                             <div class="portfolio-block_wrapper">
                                                 <div class="portfolio-block_face portfolio-block_front gilbert-front">
                                                     <img src="/assets/img/gilbert.png" alt="" class="gilbert-img project-img">
+                                                     <p class="project-name_mobile">Gilbet Displays</p>
+                                                     <p class="project-name_mobile mobile-soon"> launching soon</p>
                                                 </div>
                                                 <div class="portfolio-block_face  portfolio-block_back gilbert-back">
                                                     <h3 class="project-name"> <span> Gilbet Displays </span> </h3>
@@ -366,6 +357,8 @@
                                             <div class="portfolio-block_wrapper">
                                                 <div class="portfolio-block_face portfolio-block_front navatar-front">
                                                     <img src="/assets/img/navatar.png" alt="" class="navatar-img project-img">
+                                                     <p class="project-name_mobile">  Navatar Group </p>
+                                                      <p class="project-name_mobile mobile-soon"> Launching Soon </p>
                                                 </div>
                                                 <div class="portfolio-block_face  portfolio-block_back navatar-back">
                                                     <h3 class="project-name"> <span> Navatar Group </span> </h3>
@@ -390,6 +383,7 @@
                                             <div class="portfolio-block_wrapper">
                                                 <div class="portfolio-block_face portfolio-block_front personal-front">
                                                     <img src="/assets/img/port.png" alt="" class="port-img project-img">
+                                                     <p class="project-name_mobile"> Personal Portfolio </p>
                                                 </div>
                                                 <div class="portfolio-block_face  portfolio-block_back personal-back"><h3 class="project-name"> <span> Personal Portfolio </span> </div>
                                             </div>
@@ -402,6 +396,8 @@
                                             <div class="portfolio-block_wrapper">
                                                 <div class="portfolio-block_face portfolio-block_front door-front">
                                                     <img src="/assets/img/PI.jpg" alt="" class="PI-img project-img">
+                                                     <p class="project-name_mobile"> Door Detector</p>
+                                                     <p class="project-name_mobile mobile-soon"> Coming Soon </p>
                                                 </div>
                                                 <div class="portfolio-block_face  portfolio-block_back door-back">
                                                     <p class="project-coming_des"> Coming Soon </p>
@@ -417,6 +413,7 @@
                                             <div class="portfolio-block_wrapper">
                                                 <div class="portfolio-block_face portfolio-block_front paddle-front">
                                                     <img src="/assets/img/paddle.png" alt="" class="paddle-img project-img">
+                                                     <p class="project-name_mobile"> Canvas Paddle Game </p>
                                                 </div>
                                                 <div class="portfolio-block_face  portfolio-block_back paddle-back"><h3 class="project-name"> <span> Canvas Paddle Game </span> </div>
                                             </div>
@@ -427,9 +424,6 @@
 
                                 </div>
                             </div>
-
-
-
 
                         </div>
                     </section>
@@ -446,24 +440,7 @@
             </div> 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <div id="page-4" class="page page-4 contact animation-needed">
+            <div id="page-4" class="page page-4 contact">
                 <div class="contact-wrapper">
                     <section class="contact-info">
                         <div class="contact-info_wrapper">
