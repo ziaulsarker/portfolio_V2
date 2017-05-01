@@ -1,14 +1,14 @@
 "use strict";
 
-let pages = document.getElementsByClassName("page");
+var pages = document.getElementsByClassName("page", ["page"]);
 
-let navIcon = document.querySelector(".nav-hamburger");
+var navIcon = document.querySelector(".nav-hamburger");
 
-let siteHeader = document.querySelector(".SiteHeader");
+var siteHeader = document.querySelector(".SiteHeader");
 
 
 
-navIcon.addEventListener("click", () => {
+navIcon.addEventListener("click", function() {
     navIcon.classList.toggle("hamburger-slider");
     document.querySelector(".bar-1").classList.toggle("navbar-left");
     document.querySelector(".bar-2").classList.toggle("hide");
@@ -29,10 +29,10 @@ function showPage(element){
 
   
     // get id for all pages and convert to only show the string with out the hash
-    let pageHash = element.hash.split("#").splice(-1, 1).join(); 
+    var pageHash = element.hash.split("#").splice(-1, 1).join(); 
 
     // loop through all pages and if the hash for the anchor matches translate the page from left to right with css class
-    for(let i = 0; i < pages.length; i++){ 
+    for(var i = 0; i < pages.length; i++){ 
         if(pageHash === pages[i].id ){
 
             pages[i].classList.add("show");
@@ -45,10 +45,10 @@ function showPage(element){
 
 function showPort(element){
       // get id for all pages and convert to only show the string with out the hash
-    let pageHash = element.hash.split("#").splice(-1, 1).join(); 
+    var pageHash = element.hash.split("#").splice(-1, 1).join(); 
 
     // loop through all pages and if the hash for the anchor matches translate the page from left to right with css class
-    for(let i = 0; i < pages.length; i++){ 
+    for(var i = 0; i < pages.length; i++){ 
         if(pageHash === pages[i].id ){
             pages[i].classList.add("show");
         } else{
@@ -253,46 +253,46 @@ function showPort(element){
 
 (function(){
 
-  setTimeout(() => {
+  setTimeout(function() {
     navIcon.classList.remove("fadeInDown");
   }, 1000);
 
-  let homeTextTop = document.querySelectorAll(".text-top li");
-  let homeTextBottom = document.querySelectorAll(".text-bottom li");
+  var homeTextTop = document.querySelectorAll(".text-top li");
+  var homeTextBottom = document.querySelectorAll(".text-bottom li");
 
   function animateText(){
-    homeTextTop.forEach( (letter) => {
-      letter.style.transform = "translate(" + randomNumberByWidth() + "px" + "," + randomNumberByHeight() + "px )";
+    homeTextTop.forEach( function (varter) {
+      varter.style.transform = "translate(" + randomNumberByWidth() + "px" + "," + randomNumberByHeight() + "px )";
     } );
 
-    homeTextBottom.forEach( (letter) => {
-      letter.style.transform = "translate(" + randomNumberByWidth() + "px" + "," + randomNumberByHeight() + "px )";
+    homeTextBottom.forEach( function (varter) {
+      varter.style.transform = "translate(" + randomNumberByWidth() + "px" + "," + randomNumberByHeight() + "px )";
     } );
 
-    setTimeout(() => {
+    setTimeout(function() {
 
-      document.querySelectorAll(".fly-in_text").forEach((list) => { 
+      document.querySelectorAll(".fly-in_text").forEach(function(list) { 
         list.classList.remove("text-hidden");
         
       });
 
-      homeTextTop.forEach( (letter) => {
-        letter.style.transform = "translate(0px)"
+      homeTextTop.forEach( function (varter)  {
+        varter.style.transform = "translate(0px)"
       });
 
-      homeTextBottom.forEach( (letter) => {
-        letter.style.transform = "translate(0px)"
+      homeTextBottom.forEach( function (varter)  {
+        varter.style.transform = "translate(0px)"
       });
 
     }, 100 );
   }
 
-   let counter = 2;
+   var counter = 2;
 
   function animateIcon(){
-    let icons = document.querySelectorAll(".scroll-down_icon");
+    var icons = document.querySelectorAll(".scroll-down_icon");
 
-    icons.forEach( (icon) => {
+    icons.forEach( function(icon) {
         icon.style.transform = "translateY(" + counter + "px)";
     });
     
@@ -311,12 +311,12 @@ function showPort(element){
 
 
 function randomNumberByWidth(){
-    let random = Math.floor(Math.random() * window.innerWidth ) - (window.innerWidth / 2);
+    var random = Math.floor(Math.random() * window.innerWidth ) - (window.innerWidth / 2);
     return random;
 }
 
 function randomNumberByHeight(){
-    let random = Math.floor(Math.random() * window.innerHeight ) - (window.innerHeight / 2);
+    var random = Math.floor(Math.random() * window.innerHeight ) - (window.innerHeight / 2);
     return random;
 }
 

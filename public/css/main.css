@@ -688,7 +688,7 @@ canvas {
     z-index: 3;
     text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
     position: absolute;
-    z-index: 5;
+    z-index: 10;
 }
 
 
@@ -1186,8 +1186,8 @@ canvas {
     }
 
     .SiteHeader{
-        width: 250px;
-        transform: translateX(-250px);
+        width: 100%;
+        transform: translateX(-100%);
     }
 
     .SiteNav{
