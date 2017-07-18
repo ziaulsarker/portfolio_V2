@@ -19,7 +19,7 @@ app.set("view engine", "ejs");
 app.use("/", router);
 
 app.get("/resume", (req, res) => {
-    fs.createReadStream(__dirname + "/public/resume/Ziaul-Sarker-Resume.pdf").pipe(res);
+    fs.createReadStream(__dirname + "/public/resume/Ziaul_Sarker_Resume.pdf").pipe(res);
 })
 
 
